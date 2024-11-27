@@ -1,0 +1,39 @@
+program example3;  (* tower of hanoi *)
+var  i:integer;  
+     n:integer;  
+     p:integer;  
+     q:integer;
+     c:char;
+
+procedure hanoi(n:integer;  s:integer;  z:integer);
+begin
+  if n != 0 then
+    begin
+      call hanoi(n-1,s,6-s-z);
+      i:=i+1;  
+      call writeln;
+      call writei(i);  
+      call writei(n);
+      call writei(s);  
+      call writei(z);
+      call hanoi(n-1,6-s-z,z)
+    end
+end;  (*end of hanoi*)
+
+begin
+  for n := 1 to 4 do  
+    begin
+      for i:=1 to 4 do  
+        call writec(' ');
+      call readc(c);  
+      call writec(c)
+    end;
+  p:=1;  
+  q:=2;
+  for n:=2 to 4 do
+    begin  
+      i:=0;  
+      call hanoi(n,p,q);  
+      call writeln  
+    end
+end.  (* tower of hanoi *)

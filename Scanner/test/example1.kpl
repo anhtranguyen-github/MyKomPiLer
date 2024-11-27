@@ -1,0 +1,16 @@
+program example1; (* Example 1 *)
+begin
+switch
+return
+end. (* Example 1 *)
+
+end 
+[ ]
+<=
+<>
+<
++=
+*=
++
+*
+THIS_IS_lONG_NAME
