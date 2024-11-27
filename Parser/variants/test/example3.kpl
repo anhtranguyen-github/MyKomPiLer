@@ -1,7 +1,7 @@
 PROGRAM  EXAMPLE3;  (* TOWER OF HANOI *)
 VAR  I:INTEGER;  
      N:INTEGER;  
-     P:INTEGER;  
+     P:INTEGER;
      Q:INTEGER;
      C:CHAR;
 

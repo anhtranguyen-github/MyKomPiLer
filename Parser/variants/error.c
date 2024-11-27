@@ -15,6 +15,9 @@ extern int lineNo, colNo;
 extern char *readBuffer;
 
 void error(ErrorCode err, int lineNo, int colNo) {
+  printf("\n"); 
+  for (int i = 0; i < colNo + 1; i++) printf(" "); // Tạo khoảng trắng
+  printf("^\n"); 
 
 
   // Xử lý các mã lỗi
@@ -80,7 +83,8 @@ void error(ErrorCode err, int lineNo, int colNo) {
 
 
 void missingToken(TokenType tokenType, int lineNo, int colNo) {
-  for (int i = 0; i < colNo; i++) printf("\t"); // Tạo khoảng trắng
+  printf("\n"); 
+  for (int i = 0; i < colNo + 1; i++) printf(" "); // Tạo khoảng trắng
   printf("^\n"); 
 
   printf("%d-%d:Missing %s\n", lineNo, colNo, tokenToString(tokenType));
@@ -89,5 +93,5 @@ void missingToken(TokenType tokenType, int lineNo, int colNo) {
 
 void assert(char *msg) {
   //printf("%s\n", msg);
-  printf("") ;
+  //printf(NULL) ;
 }
